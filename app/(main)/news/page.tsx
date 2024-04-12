@@ -1,9 +1,14 @@
 import { Metadata } from "next";
+import NewsPage from "./dataFetch";
 
 export const metadata: Metadata = {
-  title: "News",
+  title: "Blog",
 };
 
-export default function NewsPage() {
-  return <section className="bg-bgColor h-dvh w-full">News!</section>;
+export default function Blogs() {
+  return (
+    <>
+      <NewsPage />
+    </>
+  );
 }
