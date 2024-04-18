@@ -7,8 +7,8 @@ export const metadata: Metadata = {
 
 export default function Blogs() {
   return (
-    <>
+    <section className="bg-bgColor h-full min-h-screen">
       <NewsPage />
-    </>
+    </section>
   );
 }
