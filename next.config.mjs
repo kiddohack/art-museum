@@ -1,8 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  basePath: "/art-museum",
-  // reactStrictMode: true,
-  // assetPrefix: "/art-museum/",
-};
+const nextConfig = {};
 
 export default nextConfig;
