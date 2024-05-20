@@ -14,6 +14,12 @@ export default function Upload() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!title || !date || !description) {
+      alert("Please fill all fields!");
+      return;
+    }
+
     try {
       const url = await uploadFile(image);
       if (url) {
@@ -70,17 +76,17 @@ export default function Upload() {
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Description"
           />
-          <section className="my-1 flex items-center justify-center border-2 border-black rounded-lg p-2 bg-gray-200 cursor-pointer">
+          <label className="my-1 flex items-center justify-center border-2 border-black rounded-lg p-2 bg-gray-200 cursor-pointer">
             <span className="text-gray-500">{imageName}</span>
             <input
               type="file"
               className="hidden"
               aria-label="Image"
-              placeholder="Choose image"
+              placeholder=""
               accept="image/png, image/jpeg"
               onChange={handleFileUpload}
             />
-          </section>
+          </label>
           <section className="flex justify-center">
             <button
               type="submit"
