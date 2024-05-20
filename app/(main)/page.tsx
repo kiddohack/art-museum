@@ -7,7 +7,7 @@ export default function Home() {
         <Image
           src="/modern_art.webp"
           fill={true}
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           alt="Modern Art Photo"
         />
       </section>
